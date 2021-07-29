@@ -34,7 +34,6 @@ bool areIdentical(TreeNode<int> *root1, TreeNode<int> * root2){
         return false;
     }
     
-//We reached here. so both trees have same root nodes and same no of children.
     for(int i=0; i<root1->children.size(); i++){
         TreeNode<int> *child1 = root1->children[i];
         TreeNode<int> *child2 = root2->children[i];
@@ -47,55 +46,6 @@ bool areIdentical(TreeNode<int> *root1, TreeNode<int> * root2){
     
     return true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
