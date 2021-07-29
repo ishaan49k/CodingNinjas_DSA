@@ -29,54 +29,11 @@ int getLargeNodeCount(TreeNode<int>* root, int x){
     }
     
     for(int i=0; i<root->children.size(); i++){
-        int child_ans = getLargeNodeCount(root->children[i],x); // child_ans stores the no of nodes in subtree more than x
+        int child_ans = getLargeNodeCount(root->children[i],x); 
         count += child_ans;
     }
     
     return count;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
