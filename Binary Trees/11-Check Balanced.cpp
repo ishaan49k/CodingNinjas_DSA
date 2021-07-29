@@ -17,30 +17,23 @@
 
 ***********************************************************/
 //Final solution:
-
-// create class:
 class balanceReturnType{
     public:
     int height;
     int balanced;
 };
 
-// Create a helper function:
 balanceReturnType* isBalancedHelper(BinaryTreeNode<int> *root){
-    //base case:
     if(root == NULL){
         balanceReturnType* ans = new balanceReturnType();
         ans->height = 0;
         ans->balanced = true;
         return ans;
     }
-    
-    // Recursive call:
     balanceReturnType* leftAns = isBalancedHelper(root->left);
     balanceReturnType* rightAns = isBalancedHelper(root->right);
     
-    // Small calculation:
-    bool temp; // stores if the current node is balanced or not:
+    bool temp;
     if(!(leftAns->balanced) || !(rightAns->balanced) || (abs(leftAns->height - rightAns->height)>1)){
         temp = false;
     }else{
@@ -63,50 +56,4 @@ bool isBalanced(BinaryTreeNode<int> *root){
     
     return isBalancedHelper(root)->balanced;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
