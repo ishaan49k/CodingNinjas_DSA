@@ -18,50 +18,12 @@
 ***********************************************************/
 //Final solution:
 int getSum(BinaryTreeNode<int>* root){
-    // Base case:
     if(root == NULL){
         return 0;
     }
-    
-    // Recursive call:
     int leftAns = getSum(root->left);
     int rightAns = getSum(root->right);
     
     return leftAns + rightAns + root->data;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
