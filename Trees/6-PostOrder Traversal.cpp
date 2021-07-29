@@ -1,0 +1,76 @@
+/************************************************************
+ 
+    Following is the structure for the TreeNode class
+
+    template <typename T>
+    class TreeNode {
+     public:
+        T data;
+        vector<TreeNode<T>*> children;
+    
+        TreeNode(T data) {
+            this->data = data;
+        }
+    
+        ~TreeNode() {
+            for (int i = 0; i < children.size(); i++) {
+                delete children[i];
+            }
+        }
+    };
+
+************************************************************/
+
+void printPostOrder(TreeNode<int>* root){
+    if(root==NULL){
+        return;
+    }
+    
+    // First we call print on children and then print the root node.
+    for(int i=0; i<root->children.size(); i++){
+        printPostOrder(root->children[i]);
+    }
+    
+    cout << root->data << " ";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
