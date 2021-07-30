@@ -1,4 +1,3 @@
-// revise the code once and ask the TA to explain the code to you
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -13,8 +12,7 @@ void DFS(vector<vector<char>> &board, vector<vector<bool>> visited, int x, int y
     if(board[x][y] != needColor){
         return;
     }
-    
-    // we have completed a cycle and have returned to the starting point
+
     if(visited[x][y]){
         foundCycle = true;
         return;
