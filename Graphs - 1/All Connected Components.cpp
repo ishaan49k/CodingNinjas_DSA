@@ -3,12 +3,12 @@ using namespace std;
 #include <vector>
 #include <queue>
 
-// given a starting vertex(sv), we need to find the connected component it is a part of
+
 vector<int> getOneComponent(bool** grah, int v, int sv, bool* visited){
-    // create a vector to store connected compoonent in
+
     vector<int> component;
     
-    // create a queue to store all the vertices which are part of the same component
+
     queue<int> pendingVertices;
     
     pendingVertices.push(sv);
@@ -34,7 +34,7 @@ vector<int> getOneComponent(bool** grah, int v, int sv, bool* visited){
 
 
 vector<vector<int>> getAllComponents(bool** graph, int v){
-    vector<vector<int>> answer; // this is the vector of vectors which stores final answer
+    vector<vector<int>> answer; 
     
     // create a visited array
     bool* visited = new bool[v]();
