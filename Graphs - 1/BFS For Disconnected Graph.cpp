@@ -3,27 +3,25 @@ using namespace std;
 #include<queue>
 
 void printBFS1(int** edges, int n, int sv, bool* visited){
-    // queue stores vertices which we have seen but not printed yet
     queue<int> pendingVertices;
     
-    // first push the starting vertex into the queue
+
     pendingVertices.push(sv);
     visited[sv] = true;
     
-    // keep printing while queue dosent become empty
+
     while(!pendingVertices.empty()){
-        // print the vertex at front of queue
+
         int currentVertex = pendingVertices.front();
         pendingVertices.pop();
         cout << currentVertex << endl;
         
-        // add all vertices which are adj to current vertex in queue
+
         for(int i=0; i<n; i++){
             if(i == currentVertex){
                 continue;
             }
-            
-            // if there is an edge bw currentVertex and ith vertex and ith has not been visisted yet, ad dit to the queue
+
             if(edges[currentVertex][i] == 1 && visited[i] == false){
                 pendingVertices.push(i);
                 visited[i] = true;
@@ -40,8 +38,7 @@ void printBFS2(int** edges, int n){
         visited[i] = false;
     }
     
-    // call function that prints only connected graph - printDFS1
-    // iterate through all vertices. if any is not visited, call DFS1 on it
+
     for(int i=0; i<n; i++){
         if(visited[i] == false){
             printBFS1(edges, n, i, visited);
@@ -62,13 +59,10 @@ int main(){
     int n;
     int e;
     cin >> n >> e;
-    
-// to store all the edges, create a 2D array of size n * n
-// we could have filled bools in it but for now, use 0 and 1 to check connection
+
     int** edges = new int* [n];
     for(int i=0; i<n; i++){
         edges[i] = new int[n];
-        // initialize the entire column we added above with 0's
         for(int j=0; j<n; j++){
             edges[i][j] = 0;
         }
@@ -85,7 +79,7 @@ int main(){
     }
 
     
-    // it takes in adj matrix, its size, start vertex and array of visted indexes
+
     printBFS2(edges, n);
     
     // Delete all the memory
