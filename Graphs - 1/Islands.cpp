@@ -2,7 +2,7 @@
 using namespace std;
 
 
-// DFS function will do DFS and mark all the vertices starting from sv which are part of the same group as visited
+
 void DFS(bool** graph, int v, int sv, booll* visited){
     visited[sv] = true;
     
