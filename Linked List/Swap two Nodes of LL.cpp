@@ -1,21 +1,3 @@
-/****************************************************************
- 
-    Following is the class structure of the Node class:
-
-        class Node
-        {
-        public:
-            int data;
-            Node *next;
-            Node(int data)
-            {
-                this->data = data;
-                this->next = NULL;
-            }
-        };
-
-*****************************************************************/
-
 Node *swapNodes(Node *head, int i, int j){
     if(head==NULL || (i==j)){
         return head;
@@ -29,13 +11,7 @@ Node *swapNodes(Node *head, int i, int j){
     Node* secondNode = NULL;
     Node* secondNodeP = NULL;
     
-    int pos = 0; // keeps track of the index we are on.
-    
-    
-    
-    // Travel the entire LL to assign nodes to above 4 null nodes pointers.
-    // ie travel the LL to locate the nodes to be swapped by their index.
-// once we arrive at index, initialize all the 4 null node pointers.
+    int pos = 0;
     while(currentNode!=NULL){
         if(pos==i){
             firstNodeP = prev;
