@@ -1,19 +1,16 @@
-// Final code
 #include<queue>
 
-//given list of priorities of n people and index of our priority(k)
+
 int buyTicket(int *arr, int n, int k){
-    queue<int> peopleQueue; // stores indexes of the people in line to get ticket
+    queue<int> peopleQueue; 
     
-    priority_queue<int> maxHeap; // stores the priorities of all the people in the queue
-    
-    // enter all data into queue and priority queue
+    priority_queue<int> maxHeap; 
     for(int i=0; i<n; i++){
         peopleQueue.push(i);
         maxHeap.push(arr[i]);
     }
     
-    int time = 0; // this is the final answer to be returned
+    int time = 0;
     
     while(!maxHeap.empty()){
         int high = maxHeap.top();
