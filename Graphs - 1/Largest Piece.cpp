@@ -10,12 +10,11 @@ int DFS(vector<vector<int>> &cake, vector<vector<bool>> &visited, int x, int y, 
     
     visited[x][y] = true;
     
-    int count = 1; // count stores answer of recursion. initialize with 1 cuz the first 1 is the 1 we started on
+    int count = 1;
     
     int dx[] = {0, 0, -1, 1};
     int dy[] = {1, -1, 0, 0};
-    
-    // move in all 4 directions of starting 1 and call recursion
+
     for (int i=0; i<4; i++){
         int X = x + dx[i];
         int Y = y + dy[i];
