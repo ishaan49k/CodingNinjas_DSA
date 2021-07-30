@@ -39,22 +39,3 @@ Node *skipMdeleteN(Node *head, int M, int N){
     return head;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
