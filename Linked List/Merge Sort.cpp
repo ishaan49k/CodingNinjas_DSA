@@ -1,18 +1,3 @@
-/****************************************************************
-    Following is the class structure of the Node class:
-
-        class Node
-        {
-        public:
-            int data;
-            Node *next;
-            Node(int data)
-            {
-                this->data = data;
-                this->next = NULL;
-            }
-        };
-*****************************************************************/
 Node* findMid(Node*head){
     if(head==NULL || head->next==NULL){
         return head;
@@ -71,12 +56,10 @@ Node* mergeSort(Node* head){
     Node* half1 = head;
     Node* half2 = mid->next;
     mid->next = NULL;
-    
-    // Recursive call.
+
     half1 = mergeSort(half1);
     half2 = mergeSort(half2);
-    
-    // small calculation.
+
     return mergeTwoSortedLinkedLists(half1, half2);
 }
 
