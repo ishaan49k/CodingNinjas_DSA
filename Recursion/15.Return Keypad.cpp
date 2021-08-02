@@ -59,7 +59,7 @@ int keypad(int input, string* output){
 
     string options = getString(lastDigit);
     
-    for(int i=0; i<options.length(); i++){
+    for(int i=0; i < options.length() - 1; i++){
         for(int j=0; j<smallOutputSize; j++){
             output[j + (i+1)*smallOutputSize] = output[j];
         }
