@@ -15,6 +15,8 @@ Node *removeDuplicates(Node *head){
             continue;
         }
         if(t1->data == t2->data){
+//             Node* temp = t2;
+//             delete temp;
             t2 = t2->next;
             continue;
         }
