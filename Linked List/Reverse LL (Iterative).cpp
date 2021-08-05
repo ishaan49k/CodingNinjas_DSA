@@ -2,14 +2,15 @@ Node *reverseLinkedList(Node *head){
     if(head==NULL || head->next==NULL){
         return head;
     }
-    Node* c = head;
-    Node* n = head->next;
+    
     Node* p = NULL;
-	while(c != NULL){
-        c->next = p;
+    Node* c = head;
+    Node* n;
+    while(c != NULL){
+        n = c->next;
+        c->next = p; 
         p = c;
         c = n;
-        n = n->next;
     }
     
     return p;
@@ -17,7 +18,9 @@ Node *reverseLinkedList(Node *head){
 
 
 
+
 OR
+
 
 
 
@@ -29,15 +32,19 @@ Node *reverseLinkedList(Node *head){
     Node* c = head;
     Node* n = head->next;
     Node* p = NULL;
-    while(c!=NULL){
-        n =c->next;
-        c->next = p; 
+	while(n != NULL){
+        c->next = p;
         p = c;
         c = n;
-       
+        n = n->next;
     }
-    return p;
+    
+    c->next = p;
+    return c;
 }
+
+
+
 
 
 
