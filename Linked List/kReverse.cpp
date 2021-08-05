@@ -4,24 +4,23 @@ Node *kReverse(Node *head, int k){
     }
     
     Node* current  = head;
-    Node* fwd = NULL;
-    Node* prev = NULL;
-    
+    Node* f;          // forward 
+    Node* p = NULL;   // previous
     int count = 0;
-
     while(count<k && current!=NULL){
-        fwd = current->next;
-        current->next = prev;
-        prev = current;
-        current = fwd;
+        f = current->next;
+        current->next = p;
+        p = current;
+        current = f;
         count+=1;
     }
     
-    if(fwd!=NULL){
-        head->next = kReverse(fwd, k);
+
+    if(f != NULL){
+        head->next = kReverse(f, k);
     }
     
-    return prev;
+    return p;
 }
 
 
