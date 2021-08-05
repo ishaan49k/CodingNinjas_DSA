@@ -10,9 +10,9 @@ Node *appendLastNToFirst(Node *head, int n){
         len+=1;
     }
     
-    int curr=1;
-    Node* newTail=head;
-    while(curr<len-n){
+    int curr = 0;
+    Node* newTail = head;
+    while(curr <= len-n-1){
         newTail = newTail->next;
         curr++;
     }
@@ -29,30 +29,6 @@ Node *appendLastNToFirst(Node *head, int n){
     
     return head2;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
