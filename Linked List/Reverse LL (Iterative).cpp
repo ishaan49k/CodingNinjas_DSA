@@ -13,7 +13,7 @@ Node *reverseLinkedList(Node *head){
         c = n;
     }
     
-    return p;
+    return p;   // the head of reversed LL is at p
 }
 
 
