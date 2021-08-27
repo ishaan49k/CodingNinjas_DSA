@@ -45,6 +45,11 @@ BinaryTreeNode<int>* buildTreeHelper(int* postorder, int postStart, int postEnd,
     
 }
 
+// left subtree:
+// find postEnd by equating distance of left subarray in postorder and inorder
+
+// right subtree
+// find postStart by left subtree postStart + 1
 
 
 
