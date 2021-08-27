@@ -48,11 +48,6 @@ BinaryTreeNode<int>* buildTreeHelper(int* postorder, int postStart, int postEnd,
 
 
 
-
-
-
-
-
 BinaryTreeNode<int>* buildTree(int *postorder, int postLength, int *inorder, int inLength){
     int postStart = 0;
     int postEnd = postLength - 1;
