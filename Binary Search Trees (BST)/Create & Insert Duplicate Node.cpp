@@ -43,7 +43,7 @@ void insertDuplicateNode(BinaryTreeNode<int> *root){
 
 -------------------------------------------------------------------------------------------------------------
     
-// Even this code work. Here is called recursion on left and right subtrees first and then handled the root node
+// Even this code work. Here I called recursion on left and right subtrees first and then handled the root node
 
 void insertDuplicateNode(BinaryTreeNode<int> *root){
     // Base case
