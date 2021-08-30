@@ -30,7 +30,7 @@ void rootToLeafPathsSumToKHelper(BinaryTreeNode<int> *root, vector<int> &path, i
     
     // work on root node
     k -= root->data;
-    path.push_back(root->data);
+    path.push_back(root->data);  // add curr node at the end of vector
     
     // we have reached a leaf node. if k==0, then we have found a valid path we can print
     if(root->left == NULL && root->right == NULL){
@@ -40,7 +40,7 @@ void rootToLeafPathsSumToKHelper(BinaryTreeNode<int> *root, vector<int> &path, i
             }
             cout << endl;
         }
-        path.pop_back();
+        path.pop_back();   // by pop back, we remove latest added node from back of vector. and we backtrack to its parent node
         return;
     }
     
