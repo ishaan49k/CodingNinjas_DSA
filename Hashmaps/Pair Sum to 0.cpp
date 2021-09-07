@@ -17,6 +17,31 @@ int pairSum(int *arr, int n){
 }
 
 
+or
+    
+int pairSum(int *arr, int n){
+    
+    // create a hashmap to store freq of all elements
+    unordered_map<int, int> mp;
+    int pairs = 0;
+    
+    for(int i=0; i<n; i++){
+        int compliment = -arr[i];
+        
+        if(mp.count(compliment)){
+            pairs += mp[compliment];
+        }
+        
+        mp[arr[i]]++;
+        
+    }
+    
+    return pairs;
+    
+    
+    
+}
+
 
 
 
